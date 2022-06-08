@@ -1,0 +1,186 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgb(45, 55, 53);
+    color: white;
+    font-size: 1.4rem;
+}
+
+.header {
+    padding: 2rem;
+    margin-bottom: 4rem;
+    border-bottom: .4rem solid rgb(10, 157, 127);
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+}
+
+.container-app {
+    display: grid;
+    gap: 4rem;
+}
+
+@media (min-width: 768px) {
+    .container-app {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+main {
+    margin: 4rem auto;
+    max-width: 1200px;
+}
+
+.container {
+    border: 1px solid rgb(78, 77, 77);
+    border-radius: .5rem;
+    min-height: 260px;
+    margin: auto 2rem;
+    padding: 2rem;
+    -webkit-box-shadow: 0px 10px 33px -17px rgb(170, 170, 170);
+    -moz-box-shadow: 0px 10px 33px -17px rgb(134, 134, 134);
+    box-shadow: 0px 10px 33px -17px rgb(157, 156, 156);
+}
+
+.select {
+    max-width: 400px;
+    margin: 0 auto 1rem auto;
+}
+
+.select label {
+    display: block;
+}
+
+.select input,
+.select select {
+    all: unset;
+    border: 1px solid #cbd5e1;
+    width: 100%;
+    border-radius: .5rem;
+    padding: .5rem;
+    margin: .2rem 0;
+    background-color: rgb(45, 55, 53);
+}
+
+
+input[type="submit"] {
+    display: block;
+    background-color: rgb(10, 157, 127);
+    color: white;
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem 3rem;
+    margin: 2rem auto 0 auto;
+    width: 100%;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: none;
+    width: 100%;
+    transition: background-color .3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(53, 171, 150);
+}
+
+
+
+@media (min-width: 768px) {
+    input[type="submit"] {
+        max-width: 400px;
+    }
+}
+
+
+/* Spinner */
+.spinner {
+    margin: 100px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.cube1,
+.cube2 {
+    background-color: rgb(53, 171, 150);
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
+    animation: sk-cubemove 1.8s infinite ease-in-out;
+}
+
+.cube2 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+@-webkit-keyframes sk-cubemove {
+    25% {
+        -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5)
+    }
+
+    50% {
+        -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg)
+    }
+
+    75% {
+        -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5)
+    }
+
+    100% {
+        -webkit-transform: rotate(-360deg)
+    }
+}
+
+@keyframes sk-cubemove {
+    25% {
+        transform: translateX(42px) rotate(-90deg) scale(0.5);
+        -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+    }
+
+    50% {
+        transform: translateX(42px) translateY(42px) rotate(-179deg);
+        -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+    }
+
+    50.1% {
+        transform: translateX(42px) translateY(42px) rotate(-180deg);
+        -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+    }
+
+    75% {
+        transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+        -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+.clima h2 {
+    font-size: 1.6rem;
+}
+
+.clima>p:first-of-type {
+    font-size: 3rem;
+    color: rgb(10, 157, 127);;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.clima p {
+    text-align: center;
+    margin: 1.2rem 0;
+}
+
+.clima p span {
+    font-size: 1rem;
+    vertical-align: super;
+}
+
